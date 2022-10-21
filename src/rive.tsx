@@ -13,8 +13,8 @@ export const QwikRive = component$(({ options }: OptionsProps) => {
     width: 500,
     height: 500
   });
-  const signal   = useSignal<Element>();
-  const crateRive$ = $(() => {
+  const signal = useSignal<Element>();
+  const createRive$ = $(() => {
     return new Rive({
       src: options.src,
       canvas: signal.value,
@@ -24,7 +24,7 @@ export const QwikRive = component$(({ options }: OptionsProps) => {
   });
 
   useClientEffect$(() => {
-    store.rive = crateRive$();
+    store.rive = createRive$();
   });
 
   return <canvas ref={signal} width={options.width || store.width} height={options.height || store.height}></canvas>;

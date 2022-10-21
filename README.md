@@ -45,7 +45,8 @@ npm install --save qwik-rive
 
 ```js
 import { component$, useStore } from '@builder.io/qwik';
-import { QwikRive, Options } from 'qwik-rive';
+import { QwikRive } from 'qwik-rive';
+import { Options } from 'qwik-rive/lib-types/types';
 
 export default component$(() => {
   const store = useStore<Options>({
