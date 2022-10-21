@@ -1,6 +1,6 @@
 /* eslint-disable qwik/valid-lexical-scope */
 import { $, component$, useClientEffect$, useStore, useSignal } from '@builder.io/qwik';
-import { Rive } from "@rive-app/canvas";
+import rive from "@rive-app/canvas";
 import { Options } from './types';
 
 export interface OptionsProps {
@@ -15,7 +15,7 @@ export const QwikRive = component$(({ options }: OptionsProps) => {
   });
   const signal = useSignal<Element>();
   const createRive$ = $(() => {
-    return new Rive({
+    return new rive.Rive({
       src: options.src,
       canvas: signal.value,
       autoplay: options.autoplay || true,
