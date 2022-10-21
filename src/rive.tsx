@@ -1,6 +1,6 @@
 /* eslint-disable qwik/valid-lexical-scope */
 import { $, component$, useClientEffect$, useStore, useSignal } from '@builder.io/qwik';
-import rive from "@rive-app/canvas";
+import * as rive from "@rive-app/canvas";
 import { Options } from './types';
 
 export interface OptionsProps {

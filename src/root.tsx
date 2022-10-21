@@ -3,9 +3,9 @@ import { QwikRive } from './rive';
 import { Options } from './types';
 
 export default component$(() => {
-  const store = useStore<Options>({
+  const store =  {
       src: 'https://cdn.rive.app/animations/vehicles.riv',
-  });
+  };
   return (
     <>
       <head>
