@@ -10,8 +10,8 @@ export interface OptionsProps {
 export const QwikRive = component$(({ options }: OptionsProps) => {
   const store = useStore({
     rive: noSerialize({}),
-    width: 500,
-    height: 500
+    width: 1000,
+    height: 1000
   });
 
   const canvas = useSignal<Element>();
