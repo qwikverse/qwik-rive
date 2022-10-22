@@ -1,6 +1,6 @@
 {
   "name": "qwik-rive",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Rive Animation Component for Qwik",
   "keywords": [
     "rive",
@@ -33,6 +33,7 @@
     "build": "qwik build",
     "build.lib": "vite build --mode lib",
     "build.types": "tsc --emitDeclarationOnly",
+    "build.preview": "vite build --ssr src/entry.preview.tsx",
     "dev": "vite --mode ssr",
     "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
     "fmt": "prettier --write .",
@@ -40,11 +41,13 @@
     "lint": "eslint \"src/**/*.ts*\"",
     "release": "npm run build && np --any-branch",
     "publish": "npm run build && npm publish --access public",
+    "preview": "qwik build preview && vite preview --open",
     "start": "vite --open --mode ssr",
     "qwik": "qwik"
   },
   "devDependencies": {
     "@builder.io/qwik": "0.11.1",
+    "@builder.io/qwik-city": "^0.0.117",
     "@types/eslint": "8.4.6",
     "@types/node": "latest",
     "@typescript-eslint/eslint-plugin": "5.40.0",

@@ -2,9 +2,9 @@ export type renderer = 'svg';
 import { Layout } from "@rive-app/canvas";
 
 export interface Options {
-  canvas?: Element, // required
-  src?: string, // one of src or buffer is required
-  buffer?: ArrayBuffer, // one of src or buffer is required
+  canvas?: Element,
+  src?: string,
+  buffer?: ArrayBuffer,
   artboard?: string,
   animations?: string | string[],
   stateMachines?: string | string[],

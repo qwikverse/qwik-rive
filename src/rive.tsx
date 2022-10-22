@@ -1,5 +1,5 @@
 /* eslint-disable qwik/valid-lexical-scope */
-import { $, component$, useClientEffect$, useStore, useSignal } from '@builder.io/qwik';
+import { component$, useClientEffect$, useStore, useSignal, noSerialize } from '@builder.io/qwik';
 import * as rive from "@rive-app/canvas";
 import { Options } from './types';
 
@@ -9,23 +9,21 @@ export interface OptionsProps {
 
 export const QwikRive = component$(({ options }: OptionsProps) => {
   const store = useStore({
-    rive: {},
+    rive: noSerialize({}),
     width: 500,
     height: 500
   });
-  const signal = useSignal<Element>();
-  const createRive$ = $(() => {
-    return new rive.Rive({
-      src: options.src,
-      canvas: signal.value,
-      autoplay: options.autoplay || true,
-      animations: options.animations || 'idle',
-    });
-  });
+
+  const canvas = useSignal<Element>();
 
   useClientEffect$(() => {
-    store.rive = createRive$();
+    store.rive = noSerialize(new rive.Rive({
+      src: options.src,
+      canvas: canvas.value,
+      autoplay: options.autoplay || true,
+      animations: options.animations || 'idle',
+    }));
   });
 
-  return <canvas ref={signal} width={options.width || store.width} height={options.height || store.height}></canvas>;
+  return <canvas ref={canvas} width={options.width || store.width} height={options.height || store.height}></canvas>;
 });

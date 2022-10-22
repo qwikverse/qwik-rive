@@ -1,6 +1,5 @@
-import { component$, useStore } from '@builder.io/qwik';
+import { component$ } from '@builder.io/qwik';
 import { QwikRive } from './rive';
-import { Options } from './types';
 
 export default component$(() => {
   const store =  {
