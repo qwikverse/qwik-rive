@@ -17,6 +17,9 @@ Rive Component for <a href='https://github.com/BuilderIO/qwik'>Qwik</a>.
 <details>
 <summary>Table of Contents</summary>
 
+- :runner: [Installation](#Installation)
+- :star: [Usage](#usage)
+- :🚀 : [Demo](#demo)
 - :star: [Rive Overview](#rive-overview)
 - 🚀 [Getting Started & API docs](#getting-started)
 - :mag: [Supported Versions](#supported-versions)
@@ -29,7 +32,7 @@ Rive Component for <a href='https://github.com/BuilderIO/qwik'>Qwik</a>.
 
 <br>
 
-A React runtime library for [Rive](https://rive.app).
+A Qwik runtime library for [Rive](https://rive.app).
 
 This library is a wrapper around the [JS/Wasm runtime](https://github.com/rive-app/rive-wasm), giving full control over the js runtime while providing components and hooks for React applications.
 
@@ -63,6 +66,9 @@ export default component$(() => {
 
 ```
 
+## Demo
+- [Qwik Rive Demo](https://stackblitz.com/edit/qwik-rive-demo-1-htnizh?file=src/routes/index.tsx)
+
 ## Rive Overview
 
 [Rive](https://rive.app) is a real-time interactive design and animation tool that helps teams create and run interactive animations anywhere. Designers and developers use our collaborative editor to create motion graphics that respond to different states and user inputs. Our lightweight open-source runtime libraries allow them to load their animations into apps, games, and websites.
@@ -75,21 +81,21 @@ export default component$(() => {
 
 ## Getting Started
 
-Follow along with the link below for a quick start in getting Rive React integrated into your React apps.
+Follow along with the link below for a quick start in getting Rive Qwik integrated into your Qwik apps.
 
-[Getting Started with Rive in React](https://help.rive.app/runtimes/overview/web-js)
+[Getting Started with Rive in Qwik](https://help.rive.app/runtimes/overview/web-js)
 
 [API documentation](https://help.rive.app/runtimes/overview/web-js/parameters-and-return-values)
 
 ## Supported Versions
 
-This library supports React versions `^0.11.0`.
+This library supports Qwik versions `^0.11.1`.
 
 ## Examples
 
 Check out our Storybook instance that shows how to use the library in small examples, along with code snippets! This includes examples using the basic component, as well as the convenient hooks exported to take advantage of state machines.
 
-- [Example page](https://rive-app.github.io/rive-react)
+- [Example page](ttps://stackblitz.com/edit/qwik-rive-demo-1-htnizh?file=src/routes/index.tsx)
 - [Login screen w/ input tracking](https://rive-app.github.io/rive-use-cases/?path=/story/example-loginformcomponent--primary)
 - [Mouse tracking](https://codesandbox.io/s/rive-mouse-track-test-t0y965?file=/src/App.js)
 - [Accessibility concerns](https://blog.rive.app/accessible-web-animations-aria-live-regions/)
