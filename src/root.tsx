@@ -1,9 +1,12 @@
 import { component$ } from '@builder.io/qwik';
 import { QwikRive } from './rive';
+import { Options } from './types';
 
 export default component$(() => {
-  const store =  {
-      src: 'https://cdn.rive.app/animations/vehicles.riv',
+  const store :Options=  {
+    src: 'https://cdn.rive.app/animations/vehicles.riv'
+
+    
   };
   return (
     <>
